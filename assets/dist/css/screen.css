@@ -148,7 +148,7 @@ html, body {
 
 /****** General ******/
 body {
-  background-color: #F6F6F6; }
+  background-color: #F5F5F5; }
 
 .container {
   width: 70%;
@@ -253,7 +253,7 @@ input[type="button"],
   cursor: pointer;
   border-radius: 3px;
   padding: .4rem .8rem;
-  background-color: #F6F6F6;
+  background-color: #F5F5F5;
   border: 1px solid #BEBEBE;
   color: #333;
   -webkit-transition: background-color 0.2s ease-in-out;
@@ -273,9 +273,9 @@ input[type="button"],
   .btn.alt,
   .tags > a.alt,
   .pagination a {
-    border-color: #27ae60;
-    background-color: #27ae60;
-    color: #F6F6F6; }
+    border-color: #90b0ba;
+    background-color: #90b0ba;
+    color: #F5F5F5; }
     button.alt:hover,
     input[type="submit"].alt:hover,
     input[type="reset"].alt:hover,
@@ -283,7 +283,7 @@ input[type="button"],
     .btn.alt:hover,
     .tags > a.alt:hover,
     .pagination a:hover {
-      background-color: #19703e; }
+      background-color: #618e9c; }
   button.big,
   input[type="submit"].big,
   input[type="reset"].big,
@@ -330,7 +330,7 @@ textarea {
   select:focus,
   textarea:focus {
     outline-width: 0;
-    border-color: #27ae60; }
+    border-color: #90b0ba; }
 
 textarea {
   overflow-y: auto;
@@ -515,9 +515,9 @@ table {
   table th, table td {
     padding: .5rem; }
   table.alt {
-    border-color: #27ae60; }
+    border-color: #90b0ba; }
     table.alt th {
-      background-color: #27ae60;
+      background-color: #90b0ba;
       color: #BEBEBE; }
 
 /****** Headers ******/
@@ -549,7 +549,7 @@ table {
   .tag-head h1,
   .main-head h1 {
     display: inline-block;
-    color: #F6F6F6;
+    color: #F5F5F5;
     padding: 1rem 2.5rem;
     max-width: 100%;
     font-variant: small-caps;
@@ -582,7 +582,7 @@ table {
   position: absolute;
   top: .5rem;
   right: .5rem;
-  color: #F6F6F6;
+  color: #F5F5F5;
   cursor: pointer;
   font-size: 1.5rem; }
 
@@ -627,7 +627,7 @@ section.navigation {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #27ae60;
+    background-color: #90b0ba;
     width: 30%;
     min-height: 60%;
     border-radius: 3px;
@@ -664,7 +664,7 @@ section.navigation {
       display: block;
       border-radius: 3px;
       text-align: center;
-      color: #F6F6F6;
+      color: #F5F5F5;
       margin: auto;
       padding: 1rem 0;
       width: 40%;
@@ -677,7 +677,7 @@ section.navigation {
         section.navigation li a {
           width: 80%; } }
       section.navigation li a:hover {
-        background-color: #1e8449; }
+        background-color: #719aa6; }
 
 /****** Posts ******/
 .posts {
