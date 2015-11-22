@@ -1,0 +1,23 @@
+{{!< default}}
+{{#author}}
+<header class="author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
+
+</header>
+
+<main class="container">
+    <section class="author-profile">   
+        <h1 class="author-title">{{name}}</h1>
+        {{#if bio}}
+            <h4 class="author-bio">{{bio}}</h4>
+        {{/if}}
+        <div class="author-meta">
+            <p>
+                {{#if location}}<i class="fa fa-map-marker"></i> {{location}} | {{/if}}
+                {{#if website}}<a href="{{website}}" style="color: inherit"><i class="fa fa-link"></i> {{website}}</a> | {{/if}}
+                <i class="fa fa-bar-chart"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+            </p>
+        </div>
+    </section>
+    {{/author}}
+    {{> "loop"}}
+</main>

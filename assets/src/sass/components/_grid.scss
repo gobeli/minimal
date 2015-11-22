@@ -1,0 +1,51 @@
+$col: 12;
+
+@function columns($breakpoint, $offset){
+	$retVal: "";
+	@for $i from 1 through $col {
+		@if $offset{
+			$retVal: $retVal + ".col-offset-"+$breakpoint+""+$i+","
+		} @else {
+			$retVal: $retVal + ".col-"+$breakpoint+""+$i+","			
+		}
+	}
+	@return $retVal;
+}
+
+.row{
+	display: flex;
+	flex-flow: row wrap;
+	@for $i from 1 through $col {
+		$width: 100/$col * $i + "%";
+		.col-l#{$i},
+		.col-m#{$i},
+		.col-s#{$i} {
+			padding: 1rem;
+			min-height: 1px;
+			flex-basis:  #{$width};
+		}
+
+		.col-offset-l#{$i},
+		.col-offset-m#{$i},
+		.col-offset-s#{$i} {
+			margin-left: #{$width};
+		}	
+	}
+	
+	@include break(small){
+		#{columns("s",false)}{
+		  flex-basis: 100%;
+		}
+		#{columns("s",true)}{
+		  margin-left: 0;
+		}
+	}
+	@include break(medium){
+		#{columns("m",false)}{
+		  flex-basis: 100%;
+		}
+		#{columns("m",true)}{
+		  margin-left: 0;
+		}
+	}
+}

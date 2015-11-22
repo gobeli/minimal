@@ -1,0 +1,97 @@
+html{
+	font-size: 18px;
+	@include break(medium) {
+		font-size: 16px;
+	}
+
+	@include break(small) {
+		font-size: 14px;
+	}
+}
+
+body, input, select, textarea, html {
+	color: $colorFg;
+	font-family: $font;
+}
+
+a{
+	text-decoration: none;
+	color: #2980b9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $colorFg;
+	margin:0;
+	margin-bottom: 2rem; 
+	font-size: 3rem;
+	font-family:$fontHeader;
+	a {
+		color: inherit;
+	}
+	&.underline{
+		border-bottom: 1px dashed $colorAlt1;
+	}
+}
+
+h1.underline{
+	border-bottom: $border;
+}
+
+h2 {
+	font-size: 2.4rem;
+	margin-bottom: 1.8rem;
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 1.6rem;
+}
+
+h4 {
+	font-size: 1.6rem;
+	margin-bottom: 1.4rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+	margin-bottom: 1.2rem;
+}
+
+h6 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+
+pre{
+	background-color: $colorAlt1;
+	border-radius: $borderRadius;
+	font-size: .9rem;
+	padding: 1rem;
+}
+
+code{
+	font-family: $fontCode;
+	overflow-x: auto;
+}
+
+hr{
+	border: 0;
+	border-bottom: 2px solid $colorAlt1;
+	margin: 2rem 0;
+	&.dashed{
+		border-style: dashed;
+	}
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}

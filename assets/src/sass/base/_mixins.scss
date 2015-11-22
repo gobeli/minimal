@@ -1,0 +1,22 @@
+@mixin defaultTransition($property) {
+	transition: $property .2s ease-in-out;
+}
+
+@mixin break($break){
+	$query: "screen and ";
+	@if $break == medium{
+		$query: $query + "(max-width: 768px)";
+	}
+	@if $break == small{
+		$query: $query + "(max-width: 480px)";
+	}
+	@media #{$query} {
+		@content
+	}
+}
+
+@mixin center(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

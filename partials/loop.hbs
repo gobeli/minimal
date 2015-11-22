@@ -1,0 +1,27 @@
+<div class="posts">
+{{#foreach posts}}
+    <div class="post">
+        <header class="post-header">
+            <a href="{{url}}" class="post-header-link {{#if image}} cover{{else}}no-cover{{/if}}">
+                {{#if image}}<img class="post-header-image" src="{{image}}" alt="{{title}}">{{/if}}
+            </a>
+        </header>
+        <section class="content">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            <p>{{excerpt words="26"}}</p>
+            <a href="{{url}}" class="btn small alt read-more">Read more</a>
+        </section>
+        <footer class="post-footer">
+            <p>{{author}} <span class="tags">{{tags prefix=" on "}}</span> | <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></p>
+            <div class="author-image">
+                {{#author}}
+                {{#if image}}
+                    <a href="{{url}}"><img src="{{image}}" alt="{{name}}" /></a>
+                {{/if}}  
+                {{/author}}
+            </div>          
+        </footer>
+    </div>
+{{/foreach}}
+</div>
+{{pagination}}

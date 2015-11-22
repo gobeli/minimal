@@ -1,0 +1,36 @@
+{{!< default}}
+{{#post}}
+<header class="post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
+<main class="container">
+    <div class="post">
+        <section class="content">
+            <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+            {{content}}
+        </section>        
+        <section class="read-next row {{#next_post}}{{else}}no-next{{/next_post}} {{#prev_post}}{{else}}no-prev{{/prev_post}}">
+            {{#next_post}}
+                <a class="next col-m6 {{#if image}}" style="background-image: url({{image}}){{/if}}" href="{{url}}">
+                    <h5>Next Post:</h5>
+                    <h2>{{title}}</h2>
+                </a>
+            {{/next_post}}
+            {{#prev_post}}
+                <a class="prev col-m6 {{#if image}}" style="background-image: url({{image}}){{/if}}" href="{{url}}">
+                    <h5>Previous Post:</h5>
+                    <h2>{{title}}</h2>
+                </a>
+            {{/prev_post}}
+        </section>
+        <footer class="post-footer">
+            <p>{{author}} <span class="tags">{{tags prefix=" on "}}</span> | <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></p>
+            <div class="author-image">
+                {{#author}}
+                {{#if image}}
+                    <a href="{{url}}"><img src="{{image}}" alt="{{name}}" /></a>
+                {{/if}}  
+                {{/author}}
+            </div>  
+        </footer>
+    </div>
+</main>
+{{/post}}

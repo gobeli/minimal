@@ -1,0 +1,35 @@
+/****** Headers ******/
+.author-head,
+.page-head,
+.post-head,
+.tag-head,
+.main-head{
+	height: 80vh;
+	width: 100%;	
+	margin-bottom: 2rem;
+    background: #222 no-repeat bottom center fixed;
+    background-size: cover;
+    @include center();
+    h1{
+    	display: inline-block;
+    	color: $colorBg;
+    	padding: 1rem 2.5rem;
+    	max-width: 100%;
+		font-variant: small-caps;
+		border-bottom: $border;
+		border-top: $border;
+        text-align: center;
+        max-width: 100%;
+        @include break(small){
+            padding: 1rem;
+
+        }
+    }
+}
+
+.author-head,
+.page-head,
+.post-head,
+.tag-head{
+    height: 60vh;
+}

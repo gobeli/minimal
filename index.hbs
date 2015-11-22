@@ -1,0 +1,14 @@
+{{!< default}}
+<header class="main-head {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <h1>{{@blog.title}}</h1>
+    <h2>{{@blog.description}}</h2>
+</header>
+<div class="row">
+	<main class="col-m8">
+	    {{> "loop"}}
+	</main>
+	<aside class="col-m4">
+		{{> "tags"}}
+		{{> "authors"}}
+	</aside>	
+</div>

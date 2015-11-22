@@ -1,0 +1,13 @@
+/****** footer ******/
+footer.page-footer{
+	padding: 0 1rem;
+	@include center();
+	justify-content: space-between;
+	p{
+		color: darken($colorAlt1,10);
+		font-size: .9rem;
+		a{
+			color: inherit;
+		}
+	}
+}

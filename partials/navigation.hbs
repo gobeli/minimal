@@ -1,0 +1,12 @@
+<span class="fa fa-align-right fa-2x menu-icon"></span>
+<div class="overlay"></div>
+<section class="navigation">
+    <nav>
+        <span class="fa fa-times menu-close"></span>
+        <ul>
+            {{#foreach navigation}}
+                <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{/foreach}}                        
+        </ul>
+    </nav>
+</section>

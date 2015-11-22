@@ -1,0 +1,171 @@
+/****** Posts ******/
+.posts{
+	margin-bottom: 1rem;
+	.post:first-child{
+		margin-top: 0;
+	}
+	@include break(medium){
+		margin-bottom: 0;
+	}
+}
+
+.post{
+	background-color: $colorPostBg;
+	margin-top: 1rem;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	img{
+		max-width: 100%;
+		border-radius: $borderRadius;
+	}
+	.content{
+		padding: 1rem;
+		.read-more{
+			display: inline-block;
+			margin: 1rem 0;
+		}
+	}	
+	&:nth-child(even) {
+		footer{
+			padding-left: 0;
+			padding-right: 1rem;
+			.author-image{
+				border: none;
+				border-right: $border;
+				margin-right: .5rem;
+				margin-left: 0;
+				order: 1;
+			}
+			p{
+				order: 2;
+			}	
+		}
+	}
+}
+
+.post-header{
+	overflow: hidden;
+	.post-header-link{
+	    display: block;
+	    .post-header-image{
+	    	border-radius: 0;
+		    @include defaultTransition(all);
+		    &:hover{
+		    	transform: scale(1.2);
+		    }
+	    }
+	}	
+}
+
+
+.post-title a{
+	border-bottom: $border;
+	border-color: $colorPostBg;
+	@include defaultTransition(border-color);
+	&:hover{
+		border-color: $colorAlt1;
+	}
+}
+
+.author-image{
+	margin-left: .5rem;
+	border-left: $border;
+	padding: 1rem;
+	img{
+		border-radius: 50%;
+		min-width: 4rem;
+		height: 4rem;
+		@include break(medium){
+			min-width: 3rem;
+			height: 3rem;
+		}
+	}
+	@include break(small){
+		padding: .5rem;
+		img{
+			min-width: 2rem;
+			height: 2rem;
+		}
+	}
+}
+
+.tags>a{
+	@extend .btn;
+	font-size: .8rem;
+	color: darken($colorAlt1,10);	
+	padding: .2rem .4rem;
+	display: inline-block;
+	@include defaultTransition(all);
+	&:hover{
+		color: $colorFg;
+	}
+}
+
+.post-footer{
+	border-top: $border;
+	@include center();
+	justify-content: space-between;
+	padding-left: 1rem;
+	p,.author-image{
+		display: inline-block;
+		margin: 0;
+		color: darken($colorAlt1,10);
+		>a{
+			color: inherit;
+			font-weight: 600;
+		}
+	}
+}
+
+
+.read-next{
+	border-top: $border;
+	.next,.prev{
+		background: transparent no-repeat center center;
+		background-attachment: cover;
+		border-radius: 0;
+		padding: 2rem;
+		@include break(medium){
+			p{display:none}
+		}
+	}
+	.no-next>.prev{
+		width: 100%;
+	}
+	.no-prev>.next{
+		width: 100%;
+	}
+}
+
+.pagination{
+	display: flex; 
+	flex-direction: column;
+	a{
+		@extend .btn,.alt,.small;
+		margin-top: 2rem;
+	}
+	.newer-posts{
+		align-self: flex-start;
+	}
+	.older-posts{
+		align-self: flex-end;
+	}
+}
+
+.posts-and-tags{
+	justify-content: space-around;
+}
+
+.all-tags,
+.all-authors{
+	padding: 1rem;
+	background-color: $colorPostBg;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	.tag,.author{
+		display: inline-block;
+		margin-bottom: .3rem;
+	}
+}
+
+.all-authors{
+	margin-top: 1rem;
+}

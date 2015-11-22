@@ -1,0 +1,19 @@
+table{
+	border: 1px solid $colorAlt1;
+	border-collapse:collapse;
+	th{
+		text-align: left;
+		background-color: $colorAlt1;
+		font-family:$fontHeader;
+	}
+	th,td{
+		padding: .5rem;
+	}
+	&.alt{
+		border-color: $colorAlt2;
+		th{
+			background-color: $colorAlt2;
+			color: $colorAlt1;
+		}
+	}
+}

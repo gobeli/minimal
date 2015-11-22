@@ -1,0 +1,35 @@
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.btn{
+	appearance: none;
+	cursor: pointer;
+	border-radius: $borderRadius;
+	padding: .4rem .8rem;
+	background-color: $colorBg;
+	border: 1px solid $colorAlt1;
+	color: $colorFg;
+	@include defaultTransition(background-color);
+	&:hover{
+		background-color: $colorAlt1;
+	}
+	&.alt{
+		border-color: $colorAlt2;
+		background-color: $colorAlt2;
+		color: $colorBg;
+		&:hover{
+			background-color: darken($colorAlt2,15);
+		}
+	}
+	&.big{
+		font-size: 1.25rem;
+		padding: .8rem 1.6rem;
+		@include break(small){
+			padding: .5rem 1rem;
+		}
+	}
+	&.small{
+		font-size: .8rem;
+	}
+}
